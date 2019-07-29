@@ -32,10 +32,10 @@ import com.google.firebase.firestore.FirebaseFirestore;
 import com.mmdev.meetups.R;
 import com.mmdev.meetups.models.ProfileModel;
 import com.mmdev.meetups.services.GPSTracker;
+import com.mmdev.meetups.ui.custom.ProgressButton;
 import com.mmdev.meetups.ui.main.MainActivity;
 import com.mmdev.meetups.ui.main.ProfileViewModel;
 import com.mmdev.meetups.utils.uiUtils;
-import com.mmdev.progressbuttonlib.ProgressButton;
 
 import java.util.ArrayList;
 
@@ -152,10 +152,12 @@ public class AuthActivity extends AppCompatActivity
 
 		SegmentedButtonGroup sBG_gender = additionalRegDialog.findViewById(R.id.dialog_registr_sbg_gender);
 		SegmentedButtonGroup sBG_prefGender = additionalRegDialog.findViewById(R.id.dialog_registr_sbg_preferedgender);
+		
 		sBG_gender.setOnClickedButtonListener(position -> {
 			if (position == 0) mGender = "male";
 			else mGender = "female";
 		});
+		
 		sBG_prefGender.setOnClickedButtonListener(position -> {
 			switch (position){
 				case 0:
