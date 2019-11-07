@@ -11,8 +11,6 @@ Used libraries/patterns:
 * Facebook SDK to login.
 
 
-![Logo](https://github.com/muramrr/roove/blob/master/media/roove_logo_256.png)
-
 ## License
 
 ```
