@@ -1,14 +1,4 @@
-/*
- * Created by Andrii Kovalchuk on 20.11.19 21:38
- * Copyright (c) 2019. All rights reserved.
- * Last modified 20.11.19 21:07
- *
- * This Source Code Form is subject to the terms of the Mozilla Public
- * License, v. 2.0. If a copy of the MPL was not distributed with this
- * file, You can obtain one at https://mozilla.org/MPL/2.0/.
- */
-
-package com.mmdev.roove.ui.events.view
+package com.mmdev.roove.ui.feed
 
 import android.os.Bundle
 import android.view.View
@@ -19,13 +9,13 @@ import com.google.android.material.tabs.TabLayoutMediator
 import com.mmdev.roove.R
 import com.mmdev.roove.ui.main.view.MainActivity
 
-class EventsFragment: Fragment(R.layout.fragment_events) {
+class FeedFragment: Fragment(R.layout.fragment_feed) {
 
 	private lateinit var mMainActivity: MainActivity
 
 	companion object{
-		fun newInstance(): EventsFragment {
-			return EventsFragment()
+		fun newInstance(): FeedFragment {
+			return FeedFragment()
 		}
 	}
 
@@ -36,9 +26,7 @@ class EventsFragment: Fragment(R.layout.fragment_events) {
 
 	override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
 		val viewPager: ViewPager2 = view.findViewById(R.id.feed_vp)
-		viewPager.adapter = EventsPagerAdapter(
-				childFragmentManager,
-				lifecycle)
+		viewPager.adapter = FeedPagerAdapter(childFragmentManager, lifecycle)
 
 		val tabLayout: TabLayout= view.findViewById(R.id.tabLayout)
 
